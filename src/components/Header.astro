@@ -5,17 +5,15 @@ import HeaderButton from "./HeaderButton.astro";
 
 <header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
   <div class="mx-auto text-center mb-6 lg:mb-16">
-    <h2 class="mb-4 text-white text-5xl font-extrabold -tracking-tight">
-      SpaceX Lauches 🚀
-    </h2>
+    <img class="mb-4" src='/logo.svg' alt="spaceX logo">
     <p class="font-light text-gray-500 sm:text-xl dark:text-gray-500">
       All th information about SpaceX
     </p>
   </div>
   <nav class="flex flex-col justify-between items-center w-full text-center md:flex-row">
     <HeaderButton to="/">Home</HeaderButton>
-    <HeaderButton to="/newest">Recents Lauches</HeaderButton>
-    <HeaderButton to="/best">Best Lauches</HeaderButton>
+    <HeaderButton to="/blog">Blog</HeaderButton>
+    <HeaderButton to="/shop">Shop</HeaderButton>
     <HeaderButton to="/about">About</HeaderButton>
   </nav>
 </header>

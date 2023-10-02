@@ -1,0 +1,19 @@
+---
+import ArticleLaunch from "../components/ArticleLaunch.astro";
+import Layout from "../layouts/Layout.astro";
+
+import json from '../mock/articles.json'
+const articles = json.articles
+
+---
+
+<Layout title="Blog">
+  <section class="max-w-3xl mx-auto">
+    <h2 class="mb-14 text-[44px] font-bold text-white">News about SpaceX</h2>
+    {
+      articles.map( article => (
+        <ArticleLaunch title={article.title} poster={article.poster} paragraphs={article.paragraphs} />
+      ))
+    }
+  </section>
+</Layout>
