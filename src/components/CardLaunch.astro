@@ -15,7 +15,7 @@ const successText = success ? 'Success' : 'Failure'
   href={`/launch/${id}`}
   class="rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:scale-105 hover:bg-gray-700 hover:border-gray-500 transition flex flex-col"
 >
-  <picture class="flex justify-center p-4">
+  <picture class="flex justify-center p-4" transition:name={`poster-${id}`}>
     <img class="mb-5 rounded-lg" src={img} alt={`Patch for launch  ${id}`}>
   </picture>
 
@@ -31,7 +31,7 @@ const successText = success ? 'Success' : 'Failure'
     >
       {successText}
     </span>
-    <h2 class="my-2 text-2xl font-bold tracking-tight text-white">
+    <h2 class="my-2 text-2xl font-bold tracking-tight text-white" transition:name={`title-${id}`}>
       Flight #{flightNumber}
     </h2>
     <p class=" mb-4 font-light text-gray-400">

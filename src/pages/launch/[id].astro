@@ -17,13 +17,15 @@ if (id){
 ---
 
 <Layout title={`Lanzamiento ${id}`}>
-  <section  class="flex gap-y-4 flex-col">
-    <img class="w-52 h-auto" src={launch?.links?.patch?.small} alt={launch?.name}>
-    <h2 class="text-white font-bold text-4xl">
-      Launch #{launch?.flight_number}
-    </h2>
-    <p class="text-lg">
-      {launch?.details}
-    </p>
+  <section  class="flex gap-y-4 justify-between items-center">
+    <img transition:name={`poster-${id}`} class="w-52 h-auto" src={launch?.links?.patch?.small} alt={launch?.name}>
+    <article>
+      <h2 class="text-white font-bold text-4xl" transition:name={`title-${id}`}>
+        Launch #{launch?.flight_number}
+      </h2>
+      <p class="text-lg">
+        {launch?.details}
+      </p>
+    </article>
   </section>
 </Layout>
